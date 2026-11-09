@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f3ed" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#" aria-label="Rock Paper Scissors home">
+          <span class="wordmark-icon" aria-hidden="true">✳</span>
+          <span>PLAYGROUND</span>
+        </a>
+        <span class="topbar-note">A classic, freshly played</span>
+      </header>
+
+      <section class="game" aria-labelledby="game-title">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> THE BEST OF GOOD FUN</p>
+        <h1 id="game-title">Rock, paper,<br /><span>scissors.</span></h1>
+        <p class="intro">Pick your move. The computer's ready.</p>
+
+        <div class="scoreboard" aria-label="Scoreboard">
+          <div class="score">
+            <span class="score-label">YOU</span>
+            <strong id="player-score" aria-live="polite">0</strong>
+          </div>
+          <div class="score-divider" aria-hidden="true"><span>:</span></div>
+          <div class="score">
+            <span class="score-label">COMPUTER</span>
+            <strong id="computer-score" aria-live="polite">0</strong>
+          </div>
+        </div>
+
+        <div class="arena" aria-label="Round choices">
+          <div class="choice-side">
+            <span class="choice-caption">YOUR PICK</span>
+            <div class="choice-card" id="player-choice" aria-label="Your choice">
+              <span class="choice-emoji" aria-hidden="true">✦</span>
+            </div>
+          </div>
+          <div class="versus" aria-hidden="true">VS</div>
+          <div class="choice-side">
+            <span class="choice-caption">THEIR PICK</span>
+            <div class="choice-card" id="computer-choice" aria-label="Computer choice">
+              <span class="choice-emoji" aria-hidden="true">✦</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="round-result" id="result" role="status" aria-live="polite">
+          <span class="result-mark" aria-hidden="true">✳</span>
+          <span>Make your move</span>
+        </div>
+
+        <div class="move-picker" aria-label="Choose your move">
+          <button class="move-button" type="button" data-choice="rock">
+            <span class="move-emoji" aria-hidden="true">✊</span>
+            <span>Rock</span>
+            <kbd>1</kbd>
+          </button>
+          <button class="move-button" type="button" data-choice="paper">
+            <span class="move-emoji" aria-hidden="true">✋</span>
+            <span>Paper</span>
+            <kbd>2</kbd>
+          </button>
+          <button class="move-button" type="button" data-choice="scissors">
+            <span class="move-emoji" aria-hidden="true">✌️</span>
+            <span>Scissors</span>
+            <kbd>3</kbd>
+          </button>
+        </div>
+        <p class="keyboard-hint">Choose a move above or press <kbd>1</kbd>, <kbd>2</kbd>, or <kbd>3</kbd></p>
+
+        <button class="reset-button" id="reset" type="button">↺ <span>Reset score</span></button>
+      </section>
+
+      <footer class="footer">
+        <span>NO PRESSURE. JUST ONE MORE ROUND.</span>
+        <span>EST. WHENEVER YOU'RE READY</span>
+      </footer>
+    </main>
+  </body>
+</html>
